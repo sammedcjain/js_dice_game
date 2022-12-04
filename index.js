@@ -1,4 +1,9 @@
 
+document.querySelector(".btn").addEventListener("click",wins)
+var count=0;
+function wins(){
+document.querySelector("h3").innerHTML='You have generated '+count+' results';
+count++;
 var pl1=Math.floor(Math.random()*6)+1;
 var pl2=Math.floor(Math.random()*6)+1;
 while(pl1===pl2)
@@ -37,8 +42,10 @@ while(pl1===pl2)
      }
 if (pl1>=pl2)
 {
-    document.querySelector("h1").innerHTML='<i class="fa-solid fa-flag-checkered" style="color:red"></i> Player 1 wins ';
+    document.querySelector("h1").innerHTML='<i class="fa-solid fa-flag-checkered" style="color:red"></i> Player 1 wins';
 }
 else if(pl2>pl1){
-    document.querySelector("h1").innerHTML='Player 2 wins <i class="fa-solid fa-flag-checkered" style="color:red"></i>';
+    document.querySelector("h1").innerHTML='Player 2 wins <i class="fa-solid fa-flag-checkered" style="color:red"></i> <br>';
+}
+
 }
